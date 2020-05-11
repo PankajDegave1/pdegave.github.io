@@ -52,6 +52,73 @@
   background: #55ACEE;
   color: white;
 }
+/*Sentence*/
+.sentence{
+     text-align: left;
+     color: #222;
+     font-size: 30px;
+}
+/*Wrapper*/
+.wrapper{
+    margin: 10px auto;
+    position: relative;
+    width: 100%;
+}
+
+/*Vertical Sliding*/
+.slidingVertical{
+	display: inline;
+	text-indent: 8px;
+}
+.slidingVertical span{
+	animation: topToBottom 8.5s linear infinite 0s;
+	-ms-animation: topToBottom 8.5s linear infinite 0s;
+	-webkit-animation: topToBottom 8.5s linear infinite 0s;
+	color: #db165c;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+}
+.slidingVertical span:nth-child(2){
+	animation-delay: 2.5s;
+	-ms-animation-delay: 2.5s;
+	-webkit-animation-delay: 2.5s;
+}
+.slidingVertical span:nth-child(3){
+	animation-delay: 5s;
+	-ms-animation-delay: 5s;
+	-webkit-animation-delay: 5s;
+}
+
+
+/*topToBottom Animation*/
+@-moz-keyframes topToBottom{
+	0% { opacity: 0; }
+	5% { opacity: 0; -moz-transform: translateY(-50px); }
+	10% { opacity: 1; -moz-transform: translateY(0px); }
+	25% { opacity: 1; -moz-transform: translateY(0px); }
+	30% { opacity: 0; -moz-transform: translateY(50px); }
+	80% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-webkit-keyframes topToBottom{
+	0% { opacity: 0; }
+	5% { opacity: 0; -webkit-transform: translateY(-50px); }
+	10% { opacity: 1; -webkit-transform: translateY(0px); }
+	25% { opacity: 1; -webkit-transform: translateY(0px); }
+	30% { opacity: 0; -webkit-transform: translateY(50px); }
+	80% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-ms-keyframes topToBottom{
+	0% { opacity: 0; }
+	5% { opacity: 0; -ms-transform: translateY(-50px); }
+	10% { opacity: 1; -ms-transform: translateY(0px); }
+	25% { opacity: 1; -ms-transform: translateY(0px); }
+	30% { opacity: 0; -ms-transform: translateY(50px); }
+	80% { opacity: 0; }
+	100% { opacity: 0; }
+}
 
 h3 {font-family: 'Sofia';font-size: 22px;}
 p  {font-family: 'Arapey';font-size: 22px;}
@@ -92,7 +159,7 @@ p.impact {
                     <img src="img/profile_1.JPG" alt="pdegave">
                 </div>
                 <h3 class="profile-title">Pankaj Degave</h3>
-                <p class="profile-description">Hadoop Engineer</p>
+                <p class="profile-description">IT Professional</p>
             </div> <!-- top-section -->
             <div class="main-navigation">
                 <ul class="navigation">
@@ -121,14 +188,28 @@ p.impact {
                     <!-- ABOUT -->
                     <div class="page-section" id="top">
                     <div class="row">
-
+<!-- ref : https://codepen.io/amritleone/pen/qERPmW & https://labrumfield.com/rotating-text-with-css-animations/  -->
                         <div class="col-md-12">
-                        <p class="impact"> Hello, I am Pankaj Degave and below is short summary about my work</p>
+                     <section class="wrapper">
+                    <h3 class="sentence">Hello, I am Pankaj Degave and I am a
+                        <div class="slidingVertical">
+                        <span>Strategic</span>
+                        <span>technologist</span>
+                        <span>Quick Learner</span>
+
+
+                        </div>
+
+                    </section>
+                        </p>
                          </div>
+                        <br>
+
                   <hr>
                         <br><br>
-                  <p style="margin-left:2.5em">
+                        <h4 class="widget-title" style="background-color:white; font-size:30px; font-family:'Courier New'"><U><b>About Me : </b></U></h4>
 
+                  <p style="margin-left:2.5em">
                    ➢  Total Experience: <b> 7 years of Experience in Technical Support</b>.<br> <br>
 
                    ➢  <b> 3.8 years of experience</b> in the field of development and production support at <b>Redhat India Pvt Ltd</b><br><br>
